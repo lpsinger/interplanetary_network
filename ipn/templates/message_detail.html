@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+        <div class="mw6 center pa3 sans-serif">
+
+            <h1 class="mb4">{{ message.notice_type }} {{ message.id }}</h1>
+            <p>{{lvc_data.notice_date}}</p>
+            <hr>
+            <div>
+                {% if message.notice_type == 'LVC Preliminary' %}
+                    <h2>{{lvc_data.title}}</h2>
+                    <div>
+                        <a id="{{lvc_data.id}}" href="{{lvc_data.eventpage_url}}"
+                           target="_blank">
+                            Event Page
+                        </a>
+                    </div>
+                    <div>
+                        <a id="{{lvc_data.id}}" href="{{lvc_data.skymap_fits_url}}"
+                               target="_blank">
+                            download Skymap fits file
+                        </a>
+                    </div>
+                    <div>
+                        {{lvc_data.comments}}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="pl2">
+                <p class="mb2">{{ message.message_json }}</p>
+            </div>
+
+        </div>
+
+{% endblock %}
