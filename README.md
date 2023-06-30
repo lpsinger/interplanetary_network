@@ -37,12 +37,13 @@ There are a few different places to watch for log messages currently.
 
 ## Project Organization
 This project is created with a type of domain driven design.
-Models - here you will find the definition of the classes/tables/models. Logic doesn't live here.
-Repo - there is a repo for each model. This is where logic and database queries can be found. Functions will be found in the repo for the model that is most applicable. If it is something that is used widely across models, then there is a shared_utils file.
-Listeners - this is where code that defines how to connect to another data source may be found.
-Jobs - these are bits of code that may be run at intervals to accomplish a task
-Management - this is where custom commands are stored. a custom command can be called from within the docker machine by shelling in. These are processes that must be started by calling the particular command.
-Templates - These are the HTML that is rendered for the front end
-Views - this is where data is loaded to populate the template.
+
+* Models - here you will find the definition of the classes/tables/models. Logic doesn't live here.
+* Repo - there is a repo for each model. This is where logic and database queries can be found. Functions will be found in the repo for the model that is most applicable. If it is something that is used widely across models, then there is a shared_utils file.
+* Listeners - this is where code that defines how to connect to another data source may be found.
+* Jobs - these are bits of code that may be run at intervals to accomplish a task
+* Management - this is where custom commands are stored. a custom command can be called from within the docker machine by shelling in. These are processes that must be started by calling the particular command.
+* Templates - These are the HTML that is rendered for the front end
+* Views - this is where data is loaded to populate the template.
 
 when adding models or views, you must remember to import the addition in the __init__.py file within that directory so the project understand that it's part of the models or the views.
