@@ -3,8 +3,8 @@ from ipn.repo.message.process import process
 
 def listen():
   consumer = Consumer(
-    client_id='5ft47ajoahp4a84cu367fh7kqa',
-    client_secret='rffk4b9hkbhujhhcvid215qm08ujnqr58u16ufuaa7r8gr3lkkl',
+    client_id='redacted',
+    client_secret='redacted',
     domain='gcn.nasa.gov')
 
   topics = [
